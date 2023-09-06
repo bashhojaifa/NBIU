@@ -1,0 +1,239 @@
+
+
+:root {
+
+    /* Main Color */
+    --themeColor: #21bf73;
+    --themeColorDark: #39B27B;
+    --themeLightColor: #56d598;
+    --secondaryColor: #B0EACD;
+    --themeDarkColor: #2E374F;
+    --themeWhiteColor: #ffffff;
+  
+    /* Greyscale Color */
+    --lightColor: #9EA3AE;
+    --lightDeepColor-1: #9EA3AE;
+    --lightDeepColor-2: #FAF8F6;
+    --lightDeepColor-3: #D3D5DA;
+    --lightDeepColor-4: #9EA3AE;
+    --darkColor: #6C727F;
+    --darkDeepColor-1: #4D5461;
+    --darkDeepColor-2: #394150;
+    --darkDeepColor-3: #212936;
+    --darkDeepColor-4: #0B0A0F;
+  
+    /* Typography */
+    --headline-1: 52px;
+    --headline-2: 40px;
+    --headline-3: 32px;
+    --headline-4: 24px;
+    --bodyXLarge: 20px;
+    --bodyLarge: 18px;
+    --bodyMedium: 16px;
+    --bodySmal: 14px;
+    --bodyXSmal: 10px;
+  }
+
+  body {
+    background: var(--lightDeepColor-2);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+.auth-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 100%;
+}
+.bg-auth-side {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    position: absolute;
+}
+
+/* .bg-primary {
+    background: linear-gradient(141.55deg, #FF6680 3.46%, #FF6680 99.86%), #FF6680 !important;
+} */
+
+.auth-content {
+    width: 75vw;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nav-logo {
+width: 3em;
+}.auth-footer {
+  margin-top: 30px;
+}
+
+a.jodit-status-bar-link {
+  display: none;
+}
+
+.login-card{
+  overflow: hidden;
+  padding: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.auth-img-content {
+  margin: 0 0 0 auto;
+  width: 400px;
+  max-width: 100%;
+}.center-screen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+.ct-toast.ct-toast-error{
+  border-left: 3px solid rgb(214, 10, 46);
+  opacity: 1;
+  margin-bottom: 15px;
+}
+
+button {
+  margin: 0 !important;
+}/*Line Progress*/
+.loading__overlay {
+  position: absolute;
+  display: block;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 500000 !important;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.indeterminate {
+  background-color:  #21bf73;
+}
+.indeterminate:before {
+  z-index: -100 !important;
+  height: 3px;
+  content: "";
+  position: fixed;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+  animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+.indeterminate:after {
+  z-index: -100 !important;
+  height: 3px;
+  content: "";
+  position: fixed;
+  background-color: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  will-change: left, right;
+  -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+input#color {
+  padding-left: 8px !important;
+}
+
+
+
+.notfound_img{
+  width: 500px
+}
+
+/* Responsive */
+@media (max-width: 500.98px) {
+  .notfound_img{
+    width: '200px' 
+  }
+}img {
+  max-width: 100%;
+}
+
+.dropdown .dropdown-toggle:after, .dropdown .dropdown-toggle:before, .dropup .dropdown-toggle:after, .dropup .dropdown-toggle:before, .dropstart .dropdown-toggle:after, .dropstart .dropdown-toggle:before, .dropend .dropdown-toggle:after, .dropend .dropdown-toggle:before {
+  transition: 0.3s ease;
+  display: none;
+}
